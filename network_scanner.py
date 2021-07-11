@@ -1,5 +1,5 @@
 import scapy.all as scapy
-import optparse as op
+import argparse as op
 
 def output(answered):
     result = {}
@@ -33,8 +33,8 @@ def scan(ip):
     '''
 
 def ip():
-    parser = op.OptionParser()
-    parser.add_option("-t","--target", dest = "ip", help = "Enter the IP address.")
+    parser = op.ArgumentParser()
+    parser.add_argument("-t","--target", dest = "ip", help = "Enter the IP address.")
     options,arguments = parser.parse_args()
     return options.ip
 
