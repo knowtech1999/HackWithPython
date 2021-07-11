@@ -35,7 +35,7 @@ def scan(ip):
 def ip():
     parser = ap.ArgumentParser()
     parser.add_argument("-t","--target", dest = "ip", help = "Enter the IP address.")
-    options,arguments = parser.parse_args()
+    options = parser.parse_args()
     return options.ip
 
 
